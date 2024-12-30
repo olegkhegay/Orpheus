@@ -1,0 +1,132 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --bg-card:#c0e0e6;
+}
+
+[data-theme="dark"] {
+  --bg-color: #050607;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.5s;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 20px 0;
+
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+
+    .links{
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      @media (max-width: 850px) {
+        display: none;
+      }
+    }
+
+    a {
+      font-size: 18px;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      transition: 0.8s;
+
+      &:hover {
+        font-weight: bold;
+        background: linear-gradient(
+          295.38deg,
+          #ffe5a2 4.89%,
+          #bf841a 50.44%,
+          #ffcd74 95.06%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+
+      }
+
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+      }
+
+      [data-theme="dark"] {
+        --bg-color: #050607;
+        --text-color: #ffffff;
+      }
+    }
+
+    .burger{
+      display: none;
+      max-width: 30px;
+      cursor: pointer;
+      z-index: 2000;
+      position: relative;
+
+      @media (max-width: 850px) {
+        display: block;
+      }
+    }
+
+    button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        width: 30px;
+        height: 30px;
+        transition: 0.8s;
+    }
+  }
+}
+
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 33.33%;
+    height: 100%;
+    background-color: var(--bg-color);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 100;
+    transition: 0.8s;
+
+    .links{
+        padding-top: 150px;
+
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        gap: 20px;
+      
+        a {
+          text-decoration: none;
+          color: var(--text-color);
+          font-size: 18px;
+          font-weight: bold;
+          transition: color 0.3s ease;
+        }
+    }
+  }
+
+  
+

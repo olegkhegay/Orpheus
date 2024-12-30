@@ -1,0 +1,108 @@
+.hero {
+  padding: 50px 0;
+  background-image: url(/Ellipse.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+
+  @media (max-width: 1000px) {
+    background-image: none;
+  }
+}
+
+.works {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #D99A01;
+  border-image: linear-gradient(295.38deg, #D99A01 4.89%, #9F6605 49.04%, #EFB62B 95.06%) 1;
+  background: linear-gradient(295.38deg, #D99A01 4.89%, #9F6605 49.04%, #EFB62B 95.06%);
+  -webkit-background-clip: text;
+  color: transparent;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 150px;
+
+  img{
+    max-width: 890px;
+    width: 100%;
+
+    @media (max-width: 1400px) {
+      max-width: 600px;
+    }
+
+    @media (max-width: 1200px) {
+      max-width: 520px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 550px;
+
+  h1{
+    font-size: clamp(1rem, 0.136rem + 4.32vw, 3.375rem);
+    font-weight: 500;
+    line-height: 1.2;
+    background: linear-gradient(295.38deg, #D99A01 4.89%, #9F6605 49.04%, #EFB62B 95.06%);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    span {
+        font-size: clamp(1rem, -0.318rem + 6.59vw, 4.625rem);
+        font-weight: 700;
+        line-height: 1.2;
+        background: linear-gradient(295.38deg, #D99A01 4.89%, #9F6605 49.04%, #EFB62B 95.06%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+  }
+
+  p{
+    font-size: clamp(1rem, 0.913rem + 0.43vw, 1.375rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #171717;
+    text-transform: capitalize;
+    
+    [data-theme="dark"] & {
+        color: #ffffff;
+    }
+
+    [data-theme="light"] {
+        color: #171717;
+    }
+  }
+
+  .buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @media (max-width: 1000px) {
+        margin: 0 auto;
+      }
+  }
+
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
+}
